@@ -61,8 +61,8 @@ function Home() {
           </div>
           <div className="pt-20 max-md:pt-10 p-10 w-1/2 max-md:w-full">
             <h2 className='font-semibold text-xl ' >
-              Hashnode's free sub-domain.</h2>
-            <h3 className='text-sm text-start  py-2'>Start a blog immediately using Hashnode's free sub-domain, and switch to a custom domain once your brand is established.</h3>
+              DEVs's free sub-domain.</h2>
+            <h3 className='text-sm text-start  py-2'>Start a blog immediately using DEVs's free sub-domain, and switch to a custom domain once your brand is established.</h3>
           </div>
 
         </div>
@@ -71,7 +71,7 @@ function Home() {
           <div className="pt-8 p-10 w-1/2 max-md:w-full">
             <h2 className='font-semibold text-xl ' >
               Headless Mode with APIs.</h2>
-            <h3 className='text-sm text-start  py-2'>Enable headless mode to integrate your blog into your existing websites and host it on a sub-path such as /blog. Utilize Hashnode APIs to fetch content for your main company website, personal portfolio, mobile apps, or other CMS platforms.</h3>
+            <h3 className='text-sm text-start  py-2'>Enable headless mode to integrate your blog into your existing websites and host it on a sub-path such as /blog. Utilize DEVs APIs to fetch content for your main company website, personal portfolio, mobile apps, or other CMS platforms.</h3>
           </div>
           <div className="w-1/2 max-md:w-full">
             <img src={apisImg} alt="" />

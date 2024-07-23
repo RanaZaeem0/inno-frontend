@@ -7,7 +7,7 @@ export default function Blogs() {
       <div className="flex gap-5 flex-col w-2/5 max-md:w-11/12">
         <div className="border p-2 rounded-xl py-5 shadow-lg ">
           <h2 className="font-medium text-xl p-4  ">
-            “The freeCodeCamp community makes heavy use of Hashnode's publishing
+            “The freeCodeCamp community makes heavy use of DEVs's publishing
             workflow to collaborate on books and tutorials. This has <span className="text-purple-500">boosted our
             productivity</span> and saved us a ton of time.”
           </h2>
@@ -15,7 +15,7 @@ export default function Blogs() {
         </div>
         <div className="border p-2 py-5 rounded-xl ">
           <h2 className="font-medium text-xl p-4">
-            “Hashnode is <span className="text-red-500">
+            “DEVs is <span className="text-red-500">
             incredibly easy</span> to integrate into existing CMS.”
           </h2>
           <UserIcon name={"Amy Dutton"} role="Core Team , Redwoodjs" img="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
@@ -31,7 +31,7 @@ export default function Blogs() {
       <div className="flex gap-5 flex-col w-2/5 max-md:w-11/12">
         <div className=" border p-2 py-5 rounded-xl ">
           <h2 className="font-medium text-xl p-4 ">
-            “Hashnode's writing editor is{" "}
+            “DEVs's writing editor is{" "}
             <span className="text-green-500"> the best on the internet.”</span>
           </h2>
           <UserIcon name={"Costa Tin"} role="Markiting Lead , MindBD" img="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
@@ -46,7 +46,7 @@ export default function Blogs() {
         <div className=" bg-black text-white border p-2 py-5 rounded-xl">
           <h2 className="font-medium text-xl p-4 ">
             “It's amazing to see how fast devs go from 0 to Blog under a domain
-            they own on Hashnode 🤯. It reminds me a lot of what Substack did
+            they own on DEVs 🤯. It reminds me a lot of what Substack did
             for journalists.”
           </h2>
           <UserIcon name={"Guillermo Rauch"} role="Ceo Vercel" img="https://images.pexels.com/photos/832998/pexels-photo-832998.jpeg?auto=compress&cs=tinysrgb&w=600" />

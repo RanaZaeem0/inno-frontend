@@ -9,7 +9,7 @@ export default function Darklayout() {
     return (
         <div className='bg-black text-white'>
             <div className="mt-10 w-full items-center text-center flex flex-col justify-center h-96 bg-black text-white">
-                <h2 className='bold-text text-5xl' >Hashnode For</h2>
+                <h2 className='bold-text text-5xl' >DEVs For</h2>
                 <h2 className='bold-text text-3xl' >Enterprises and Teams</h2>
             </div>
             <div className="flex items-center justify-center mt-10">
@@ -19,7 +19,7 @@ export default function Darklayout() {
                             <img src={Img3} alt="" />
                             <h2 className="bold-text text-xl">  Headless mode for team blogs.</h2>
                             <p className="para-text text-gray-400">
-                                Upgrade to the enterprise plan to use Hashnode's Headless blog for your company. Integrate with your existing website and install on sub-paths like /blog.
+                                Upgrade to the enterprise plan to use DEVs's Headless blog for your company. Integrate with your existing website and install on sub-paths like /blog.
                             </p>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ export default function Darklayout() {
                                 <img src={Img6} alt="" />
                                 <h2 className="bold-text text-xl">Member management with various roles.</h2>
                                 <p className="para-text text-gray-400">
-                                    Upgrade to the enterprise plan to use Hashnode's Headless blog for your company. Integrate with your existing website and install on sub-paths like /blog.
+                                    Upgrade to the enterprise plan to use DEVs's Headless blog for your company. Integrate with your existing website and install on sub-paths like /blog.
                                 </p>
                             </div>
                         </div>
@@ -53,7 +53,7 @@ export default function Darklayout() {
                                 <img src={Img5} alt="" />
                                 <h2 className="bold-text text-xl">  Headless mode for team blogs.</h2>
                                 <p className="para-text text-gray-400">
-                                    Upgrade to the enterprise plan to use Hashnode's Headless blog for your company. Integrate with your existing website and install on sub-paths like /blog.
+                                    Upgrade to the enterprise plan to use DEVs's Headless blog for your company. Integrate with your existing website and install on sub-paths like /blog.
                                 </p>
                             </div>
                         </div>
