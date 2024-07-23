@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+}
+.bold-text{
+  @apply   font-bold
+   py-4 
+   px-4 
+   rounded;
+}
+.para-text{
+
+  @apply font-medium
+  px-4
+  pb-2 
+  text-sm
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+  color: black !important;
+}
