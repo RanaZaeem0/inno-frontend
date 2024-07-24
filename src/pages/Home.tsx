@@ -1,21 +1,15 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {  useState } from 'react'
 
-import SignUp from './pages/SignUp'
-import { useSelector, useDispatch } from "react-redux"
-import Navbar from "../componut/Navbar"
-import Footer from '../componut/Footer'
+import { useSelector } from "react-redux"
 import customdominImg from "../img/customdomain.png"
 import customSubImg from "../img/customSub.png"
 import apisImg from "../img/apis.png"
-import home1Img from "../img/index"
+
 import { useNavigate } from 'react-router'
 import Blogs from '../componut/layout/Blogs'
 import OfferLayout from '../componut/layout/OfferLayout'
 import Darklayout from '../componut/layout/Darklayout'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+
 
 function Home() {
   const [count, setCount] = useState(0)

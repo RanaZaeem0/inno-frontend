@@ -1,4 +1,3 @@
-import React from "react";
 import Img1 from "../../img/1.avif"
 import Img2 from "../../img/2.avif"
 

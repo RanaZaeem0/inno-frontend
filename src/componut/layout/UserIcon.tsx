@@ -1,6 +1,9 @@
-import React from 'react'
 
-export default function UserIcon({name ,img = '', role = 'Lead markiting , Ceo'}) {
+export default function UserIcon({name ,img = '', role = 'Lead markiting , Ceo'}:{
+  name:string,
+  img:string,
+  role:string
+}) {
     console.log(name);
     
   return (

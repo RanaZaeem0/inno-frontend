@@ -1,5 +1,4 @@
-import axios from 'axios'
-import React, { useEffect } from 'react'
+
 import {format} from "date-fns"
 import { NavLink } from 'react-router-dom'
 export default function Avatar({username ='A',userId,createdAt}:{

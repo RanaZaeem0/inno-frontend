@@ -1,4 +1,4 @@
-import React, { forwardRef, useId } from "react"
+import React, { useId } from "react"
 
 
 
@@ -6,7 +6,11 @@ const BlogInput = React.forwardRef(function BlogInput({
   placeholder,
   className,
   type='text',
-  ...props},ref) {
+  ...props}:{
+    placeholder:string,
+    className:string,
+    type:string,
+  },ref) {
 const id = useId()
   return (
 

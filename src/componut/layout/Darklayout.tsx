@@ -1,4 +1,3 @@
-import React from 'react'
 import Img3 from "../../img/3.avif"
 import Img4 from "../../img/4.avif"
 import Img5 from "../../img/5.avif"
@@ -14,7 +13,7 @@ export default function Darklayout() {
             </div>
             <div className="flex items-center justify-center mt-10">
                 <div className="flex gap-5 w-11/12 max-md:flex-col">
-                    <div className="w-1/2 max-md:w-full max-md:w-full  border border-gray-700 bg-neutral-900  rounded-lg">
+                    <div className="w-1/2 max-md:w-full   border border-gray-700 bg-neutral-900  rounded-lg">
                         <div className="">
                             <img src={Img3} alt="" />
                             <h2 className="bold-text text-xl">  Headless mode for team blogs.</h2>
@@ -23,7 +22,7 @@ export default function Darklayout() {
                             </p>
                         </div>
                     </div>
-                    <div className="w-1/2 max-md:w-full max-md:w-full border border-gray-700 bg-neutral-900 rounded-lg">
+                    <div className="w-1/2 max-md:w-full  border border-gray-700 bg-neutral-900 rounded-lg">
                         <div className="">
                             <img src={Img4} alt="" />
                             <h2 className="bold-text text-xl" > AI-assisted writing for all team members.</h2>

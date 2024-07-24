@@ -1,4 +1,3 @@
-import React from "react";
 import sideImg1 from "../img/side1.avif"
 
 export default function Sidebar() {

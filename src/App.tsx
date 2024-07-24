@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState } from 'react'
+
 import './App.css'
-import SignUp from './pages/SignUp'
-import {useSelector,useDispatch} from "react-redux"
+
+import {useSelector} from "react-redux"
 import Navbar from "./componut/Navbar"
-import Footer from './componut/Footer'
+
 import { Outlet } from 'react-router'
 function App() {
   const [count, setCount] = useState(0)

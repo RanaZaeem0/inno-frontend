@@ -1,12 +1,11 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 
 import Input from '../componut/Input'
 import Button from '../componut/Button'
 import ButtonWarning from '../componut/ButtonWarning'
-import { set, useForm } from 'react-hook-form'
-import { GetScrollRestorationKeyFunction } from 'react-router-dom'
+import {  useForm } from 'react-hook-form'
 export default function Signin() {
 const naigavte  = useNavigate()
 

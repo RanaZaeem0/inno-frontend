@@ -1,6 +1,4 @@
-import React from 'react'
-import img1 from "../../img/home1.png"
-import Button from '../Button'
+
 import { useNavigate } from 'react-router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPen } from '@fortawesome/free-solid-svg-icons'

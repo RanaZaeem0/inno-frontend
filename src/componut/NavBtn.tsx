@@ -1,8 +1,9 @@
-import React from 'react'
-import { useNavigate } from 'react-router'
 
-export default function NavBtn({label,className,href} ) {
-  const Naviagte = useNavigate()
+export default function NavBtn({label,className,href}:{
+  label:string,
+  className:string,
+  href:string
+} ) {
     return (
     <button    className={`${className}`}>
 <a  href={`${href}`}>

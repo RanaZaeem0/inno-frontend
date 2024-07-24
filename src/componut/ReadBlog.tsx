@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useParams, useSearchParams } from "react-router-dom";
+import  { useState } from "react";
+import {  useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 
@@ -7,7 +7,7 @@ import Avatar from "./Avatar";
 import Dropdown from "./Dropdown.jsx"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faComments, faHandsClapping } from "@fortawesome/free-solid-svg-icons";
+import {  faComments, faHandsClapping } from "@fortawesome/free-solid-svg-icons";
 export default function ReadBlog() {
   const [post, setPost] = useState();
   const [searchParams] = useSearchParams();

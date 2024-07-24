@@ -1,6 +1,6 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import Navbar from '../componut/Navbar'
+import  { useEffect, useState } from 'react'
+
 import Avatar from "../componut/Avatar"
 import { NavLink } from 'react-router-dom'
 import Sidebar from '../componut/Sidebar'

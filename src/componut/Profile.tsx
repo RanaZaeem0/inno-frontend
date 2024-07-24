@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
-import useUserBlog from "../hook/useUserBlog";
+import  { useEffect, useState } from "react";
 import Avatar from "./Avatar";
 import { NavLink, useSearchParams } from "react-router-dom";
 import ProfileAvatar from "./layout/ProfileAvatar";
-import { useStepContext } from "@mui/material";
 import axios from "axios";
 
 export default function Profile() {
