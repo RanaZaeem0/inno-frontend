@@ -9,8 +9,6 @@ import { Outlet } from 'react-router'
 function App() {
   const [count, setCount] = useState(0)
 
-  const authStatus =useSelector(state => state.auth.status)
-   console.log(authStatus);
 
   return (
 <div>

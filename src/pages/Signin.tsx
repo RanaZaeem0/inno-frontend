@@ -9,24 +9,22 @@ import {  useForm } from 'react-hook-form'
 export default function Signin() {
 const naigavte  = useNavigate()
 
+interface userSignin {
+  email: string,
+  password: string
+}
 const [ error, setError ] = useState('')
-const {register,handleSubmit} = useForm()
-const token = localStorage.getItem('token')?.length
-console.log(token);
+const {register,handleSubmit,setValue} = useForm<userSignin>()
 
 useEffect(()=>{
-  if(token > 10){
-    naigavte('/allblog')
-  }
+ 
   
 },[])
+const loginUser = async (data:userSignin)=>{
+  setValue('email' ,"exaomple@gmail.com")
+  setValue('password' ,"exaomple@gmail.com")
 
-const loginUser = async (data)=>{
-
-      interface userSignin {
-        email: string,
-        password: string
-      }
+    
 
       console.log(data);
       setError('')
@@ -91,6 +89,7 @@ const loginUser = async (data)=>{
             <Input
               {...register("email", {
                 required: true,
+             
                 validate: {
                   matchPatern: (value) =>
                     /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
@@ -106,7 +105,7 @@ const loginUser = async (data)=>{
               placeholder={"******"}
               label={"password"}
             />
-          <Button label={'Sign In'} type="submit" classNmae={"bg-gray-800"} />
+          <Button label={'Sign In'} type="submit" className={"bg-gray-800"} />
             </div>
             
             <h2 className="text-red-500 font-normal">{error}</h2>

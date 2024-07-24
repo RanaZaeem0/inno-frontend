@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState,ChangeEvent, useEffect } from 'react';
 import 'tailwindcss/tailwind.css';
 
 const AutoGrowingInput = () => {
@@ -17,7 +17,7 @@ const AutoGrowingInput = () => {
     document.body.removeChild(span);
   }, [inputValue]);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e:ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
 

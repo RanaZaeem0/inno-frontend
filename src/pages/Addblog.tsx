@@ -1,4 +1,4 @@
-import  { useMemo, useState } from "react";
+import  { ChangeEvent, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 
 
@@ -7,11 +7,15 @@ import { useDispatch } from "react-redux";
 
 import axios from "axios";
 export default function Addblog() {
+  interface BlogSchema {
+    title: string;
+    content: string;
+  }
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<BlogSchema>();
 
   const [error, setError] = useState("");
   const Navigate = useNavigate();
@@ -25,14 +29,11 @@ export default function Addblog() {
  }
 
 
-  const createBlog = async (data) => {
+  const createBlog = async (data:BlogSchema) => {
     console.log(data);
-    interface BlogSchema {
-      title: string;
-      content: string;
-    }
+  
     try {
-      let blogData: BlogSchema = data;
+      const blogData: BlogSchema = data;
       console.log(blogData, "sa");
       const token: string | null = localStorage.getItem("token");
       console.log(token);
@@ -71,15 +72,17 @@ export default function Addblog() {
       }
     }
   };
+  type InputOrTextareaEvent = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
   const handleTextareaChange = useMemo(
-    () => (e) => {
+    () => (e:InputOrTextareaEvent) => {
       e.target.style.height = "auto";
       e.target.style.height = `${e.target.scrollHeight}px`;
     },
     []
   );
   const handleContentInput = useMemo(
-    () => (e) => {
+    () => (e:InputOrTextareaEvent) => {
       e.target.style.height = "auto";
       e.target.style.height = `${e.target.scrollHeight}px`;
     },

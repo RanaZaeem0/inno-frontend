@@ -1,9 +1,9 @@
 
 import {format} from "date-fns"
 import { NavLink } from 'react-router-dom'
-export default function Avatar({username ='A',userId,createdAt}:{
+export default function Avatar({username ='A',userId ='1',createdAt}:{
   username:string
-  userId : string
+  userId? : string
   createdAt:string
 }) 
 

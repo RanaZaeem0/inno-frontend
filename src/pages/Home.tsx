@@ -14,8 +14,6 @@ import Darklayout from '../componut/layout/Darklayout'
 function Home() {
   const [count, setCount] = useState(0)
   const Navigate = useNavigate()
-  const authStatus = useSelector(state => state.auth.status)
-  console.log(authStatus);
 
   return (
     <div>

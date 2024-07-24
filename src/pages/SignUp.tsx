@@ -16,20 +16,20 @@ export default function Signups() {
   const Naviagte = useNavigate();
   const Dispatch = useDispatch();
 
-  const authStatus = useSelector((state) => state.auth.status);
+   interface CreateuserSchema{
+    username:string,
+    password:string,
+    email:string
+   }
 
-  console.log(authStatus);
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm<CreateuserSchema>();
 
-  const createUser = async (data) => {
+  
+  const createUser = async (data:CreateuserSchema) => {
     console.log(data);
-    interface uesrSignupSchema {
-      username:string,
-      password:string,
-      email:string
-    }
+   
     try {
-      let userDetails:uesrSignupSchema = data;
+      const userDetails = data;
       console.log(userDetails ,"sa");
 
       const response = await axios.post("http://localhost:3000/api/user/signup",

@@ -27,21 +27,32 @@ useEffect(()=>{
         
       }
 },[])
-const getFirst200Words = (text) => {
+const getFirst200Words = (text:string) => {
   const words = text.split(' ');
   if (words.length > 50) {
     return words.slice(0, 15).join(' ') + '...';
   }
   return text;
 };
-  
+interface BlogPost {
+  author:{username:string , id:string}
+    id: string;
+    authorId: string;
+    title: string;
+    content: string;
+    published: boolean;
+    createdAt: string; // Use Date if you plan to parse this to a Date object
+  }
+ 
+const response :BlogPost[] = posts
+
   
     return (
        !laoding ? <div className='flex mt-10'>
   
    <div className="w-3/5 max-md:w-full pl-4 gap-5 flex flex-col">
    {
-    posts.map((item,index) => {
+    response.map((item,index) => {
      return <NavLink to={`/readblog?id=${item.id}&name=${item.author.username}`}  key={index} className=" flex items-start justify-center p-7 ml-10 flex-col border rounded-lg hover:shadow-sm ">
        <div className=" flex flex-col  justify-center items-start px-6">
        <Avatar username={item.author.username} userId={item.author.id} createdAt={item.createdAt}/>

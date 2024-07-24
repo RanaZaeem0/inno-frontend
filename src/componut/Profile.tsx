@@ -43,7 +43,7 @@ const userId = searchParams.get("userId");
     },[])
   console.log(loading)
 
- const response:BlogPost  = userBlog
+ const response:BlogPost[]  = userBlog
 
 
  console.log(response.length);

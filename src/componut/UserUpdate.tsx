@@ -18,14 +18,12 @@ export default function UserUpdate() {
 
   const [error, setError] = useState("");
 
-  const handelupdateData = async (data) => {
-    interface updateData {
-      username?: string;
-      password?: string;
-    }
-
+  const handelupdateData = async (data:{
+    username?: string;
+    password?: string;
+  }) => {
     try {
-      let blogData: updateData = data;
+      const blogData = data;
       console.log(blogData, "sa");
       const token: string | null = localStorage.getItem("token");
       console.log(token);

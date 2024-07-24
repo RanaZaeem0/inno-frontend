@@ -3,7 +3,10 @@ import { useNavigate } from 'react-router'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faComments } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios"
-const Dropdown = ({ authorId, blogId }) => {
+const Dropdown = ({ authorId, blogId }:{
+  authorId?:string,
+  blogId?:string
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showEdit, setShowEdit] = useState(false)
   const Navigate = useNavigate()
@@ -65,7 +68,7 @@ const Dropdown = ({ authorId, blogId }) => {
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
-          tabIndex="-1"
+          
         >
 
           {showEdit ?
@@ -73,7 +76,7 @@ const Dropdown = ({ authorId, blogId }) => {
               <a
                 className="block px-4 py-2 text-sm text-gray-700"
                 role="menuitem"
-                tabIndex="-1"
+                
                 id="menu-item-0"
               >
 
@@ -90,7 +93,7 @@ const Dropdown = ({ authorId, blogId }) => {
               href="#"
               className="block px-4 py-2 text-sm text-gray-700"
               role="menuitem"
-              tabIndex="-1"
+              
               id="menu-item-4"
             >
               Share
@@ -100,7 +103,7 @@ const Dropdown = ({ authorId, blogId }) => {
                 <a
                   className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
-                  tabIndex="-1"
+                  
                   id="menu-item-0"
                 >
 
@@ -113,7 +116,7 @@ const Dropdown = ({ authorId, blogId }) => {
               href="#"
               className="block px-4 py-2 text-sm text-gray-700"
               role="menuitem"
-              tabIndex="-1"
+              
               id="menu-item-5"
             >
               Add to favorites

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 
 
@@ -46,14 +46,14 @@ export default function Updateblog() {
 
     console.log(post);
   }, []);
-
-  const updateBlogData = (data) => {
+  interface Blogupdate {
+    title?:string,
+    content?:string
+  }
+  const updateBlogData = (data:Blogupdate) => {
 
     const token  = localStorage.getItem('token')
-    interface Blogupdate {
-      title:string,
-      content:string
-    }
+   
 
     const response:Blogupdate  = data
     try {
@@ -73,7 +73,7 @@ export default function Updateblog() {
               Navigate(`/readblog?id=${blogId}`)
           console.log(post);
         });
-    } catch (error) {
+    } catch (error:unknown) {
       console.log(` ${error}`);
     }
   };
@@ -87,15 +87,17 @@ export default function Updateblog() {
     published: boolean;
     title: string;
   }
+
+  type InputOrTextareaEvent = ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
   const handleTextareaChange = useMemo(
-    () => (e) => {
+    () => (e:InputOrTextareaEvent) => {
       e.target.style.height = "auto";
       e.target.style.height = `${e.target.scrollHeight}px`;
     },
     []
   );
   const handleContentInput = useMemo(
-    () => (e) => {
+    () => (e:InputOrTextareaEvent) => {
       e.target.style.height = "auto";
       e.target.style.height = `${e.target.scrollHeight}px`;
     },
@@ -140,7 +142,8 @@ export default function Updateblog() {
               </div>
 
               {errors.content && (
-                <span className="text-red-500">{errors.content.message}</span>
+                // <span className="text-red-500">{error }</span>
+                <h2></h2>
               )}
             </div>
           

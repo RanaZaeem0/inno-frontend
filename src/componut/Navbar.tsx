@@ -7,7 +7,6 @@ import {faPenToSquare} from "@fortawesome/free-solid-svg-icons"
  export default function Navbar() {
 const Navigate = useNavigate()
 
-const authStatus = useSelector(state => state.auth.status)
 const token = localStorage.getItem('token')
 
  
