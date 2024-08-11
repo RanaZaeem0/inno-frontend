@@ -55,8 +55,8 @@ export default function Signups() {
       if (response.status >= 200 && response.status < 300) {
         setSignUpLoding(false)
         localStorage.setItem("token", response.data.jwt);
-        localStorage.setItem("usersname", data.username);
-        localStorage.setItem("userId", response.data.id);
+        localStorage.setItem("username", data.username);
+        localStorage.setItem("userId", response.data.userId);
 
         console.log(localStorage.getItem("token"));
 
