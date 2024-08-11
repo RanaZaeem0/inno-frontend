@@ -29,7 +29,7 @@ export default function UserUpdate() {
       console.log(token);
 
       const response = await axios.put(
-        "http://localhost:3000/api/user/userupdate",
+        `${import.meta.env.VITE_BACKEND_URL}user/userupdate`,
         blogData,
         {
           headers: {

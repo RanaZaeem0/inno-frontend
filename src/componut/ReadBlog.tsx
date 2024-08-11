@@ -31,7 +31,7 @@ export default function ReadBlog() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/post/blog?id=${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}post/blog?id=${id}`);
         const res = response.data.response;
         setPost(res);
         setLoading(false);

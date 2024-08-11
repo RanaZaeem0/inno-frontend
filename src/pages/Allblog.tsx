@@ -15,7 +15,7 @@ useEffect(()=>{
     try {
       console.log("all blog");
       
-        const reponse = axios.get('http://localhost:3000/api/post/blog/all')
+        const reponse = axios.get(`${import.meta.env.VITE_BACKEND_URL}post/blog/all`)
         .then(data =>{
             
          setPosts(data.data.response)

@@ -31,7 +31,7 @@ export default function Updateblog() {
 
     try {
       const reponse = axios
-        .get(`http://localhost:3000/api/post/blog?id=${blogId}`)
+        .get(`${import.meta.env.VITE_BACKEND_URL}post/blog?id=${blogId}`)
         .then((data) => {
           const res = data.data.response;
           setPost(res);
@@ -58,7 +58,7 @@ export default function Updateblog() {
     const response:Blogupdate  = data
     try {
       const reponse = axios
-        .put(`http://localhost:3000/api/post/blog?id=${blogId}`,
+        .put(`${import.meta.env.VITE_BACKEND_URL}post/blog?id=${blogId}`,
           response, {
             headers: {
               "Content-Type": "application/json",

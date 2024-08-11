@@ -46,7 +46,7 @@ export default function Darklayout() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-5 w-1/2 max-md:w-full">
+                    <div className="flex flex-col gap-5 w-1/2 hover:w-7/12 max-md:w-full">
                         <div className="w-full border border-gray-700 bg-neutral-900  rounded-lg">
                             <div className="">
                                 <img src={Img5} alt="" />

@@ -4,13 +4,15 @@ import { useForm } from "react-hook-form";
 
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-
+import { defineConfig } from 'vite';
 import axios from "axios";
+import LoadingButton from "../componut/LoadingButton";
 export default function Addblog() {
   interface BlogSchema {
     title: string;
     content: string;
   }
+  const [blogLoading,setBlogLoading] = useState(false)
   const {
     register,
     handleSubmit,
@@ -33,13 +35,14 @@ export default function Addblog() {
     console.log(data);
   
     try {
+      setBlogLoading(true)
       const blogData: BlogSchema = data;
       console.log(blogData, "sa");
       const token: string | null = localStorage.getItem("token");
       console.log(token);
 
       const response = await axios.post(
-        "http://localhost:3000/api/post/blog",
+        `${import.meta.env.VITE_BACKEND_URL}post/blog`,
         blogData,
         {
           headers: {
@@ -51,11 +54,15 @@ export default function Addblog() {
 
       if (response.status >= 200 && response.status < 300) {
         Navigate("/allblog");
+      setBlogLoading(false)
+
       }
 
       
     } catch (error: any) {
       if (error.response) {
+      setBlogLoading(false)
+
         // Server responded with a status other than 200 range
         console.log(
           `Error response from server: ${error.response.status} - ${error.response.data}`
@@ -93,13 +100,14 @@ export default function Addblog() {
     <div className="bg-white h-auto w-full flex flex-col items-center justify-center ">
       <div className="w-9/12 flex flex-col items-start justify-start h-screen">
         <form className="w-full" onSubmit={handleSubmit(createBlog)}>
-          <button
+      {!blogLoading ?    <button
             type="submit"
             className="text-white bg-green-500 p-2  m-3 rounded-2xl px-4 lg:ml-80 font-medium "
           >
             Publich
           </button>
-
+          :<LoadingButton/>
+}
           <div className="w-full">
             <div className="relative">
               <textarea

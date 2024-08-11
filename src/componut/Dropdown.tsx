@@ -28,7 +28,7 @@ const Dropdown = ({ authorId, blogId }:{
       const token = localStorage.getItem('token')
       console.log(token);
 
-      const response = await axios.delete(`http://localhost:3000/api/post/blog/delete?id=${blogId}`,
+      const response = await axios.delete(`${import.meta.env.VITE_BACKEND_URL}post/blog/delete?id=${blogId}`,
         {
           headers: {
             "Content-Type": "application/json",

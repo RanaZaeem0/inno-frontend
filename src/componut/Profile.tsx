@@ -24,7 +24,7 @@ const userId = searchParams.get("userId");
 
       useEffect(()=>{
         try {
-            const  response = axios.get(`http://localhost:3000/api/post/profile?userId=${userId}`)
+            const  response = axios.get(`${import.meta.env.VITE_BACKEND_URL}post/profile?userId=${userId}`)
             .then(data =>{
                 
              setUserBlog(data.data.response)

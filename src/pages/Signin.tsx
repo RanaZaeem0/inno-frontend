@@ -6,6 +6,8 @@ import Input from '../componut/Input'
 import Button from '../componut/Button'
 import ButtonWarning from '../componut/ButtonWarning'
 import {  useForm } from 'react-hook-form'
+import LoadingButton from '../componut/LoadingButton'
+import getRefreshToken from '../config'
 export default function Signin() {
 const naigavte  = useNavigate()
 
@@ -13,24 +15,30 @@ interface userSignin {
   email: string,
   password: string
 }
+const [LoadingSign,setLoadingSign]= useState(false)
 const [ error, setError ] = useState('')
-const {register,handleSubmit,setValue} = useForm<userSignin>()
+const {register,handleSubmit,formState:{errors}} = useForm<userSignin>()
 
 useEffect(()=>{
- 
-  
+
+  const Token = getRefreshToken()
+  if(Token){
+    naigavte('/allblog')
+  }
+
+
 },[])
+
 const loginUser = async (data:userSignin)=>{
-  setValue('email' ,"exaomple@gmail.com")
-  setValue('password' ,"exaomple@gmail.com")
 
     
 
       console.log(data);
       setError('')
             try {
+              setLoadingSign(true)
                 const userDetails:userSignin  = data                
-                const response = await axios.post('http://localhost:3000/api/user/signin',
+                const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}user/signin`,
                   userDetails,
                   {  
                     headers:{
@@ -39,10 +47,10 @@ const loginUser = async (data:userSignin)=>{
                 })
                 if (response.status >= 200 && response.status < 300) {
               console.log(response);
-              
+              setLoadingSign(false)
                     localStorage.setItem('token',response.data.jwt)
-                    localStorage.setItem('username',response.data.username)
-                    localStorage.setItem('username',response.data.id)
+                    localStorage.setItem('usersname',response.data.username)
+                    localStorage.setItem('userId',response.data.id)
 
 
                     console.log(response.data);
@@ -51,7 +59,10 @@ const loginUser = async (data:userSignin)=>{
                 naigavte('/allblog')
                 }
             } catch (error:any) {
+              setLoadingSign(false)
+
               if (error.response) {
+                
                 // Server responded with a status other than 200 range
                 console.log(`Error response from server: ${error.response.status} - ${error.response.data}`);
                 setError(`Error: ${error.response.data.message || 'Server Error'}`);
@@ -100,12 +111,15 @@ const loginUser = async (data:userSignin)=>{
               placeholder={"example@gmail.com"}
               label={"email"}
             />
+            <h2 className='bg-red-500'>{errors.email?.message}</h2>
             <Input
               {...register("password", { required: true, minLength: 6 })}
               placeholder={"******"}
               label={"password"}
             />
-          <Button label={'Sign In'} type="submit" className={"bg-gray-800"} />
+              <h2 className='bg-red-500'>{errors.password?.message}</h2> 
+        {!LoadingSign ?  <Button label={'Sign In'} type="submit" className={"bg-gray-800"} />:
+        <LoadingButton/>}
             </div>
             
             <h2 className="text-red-500 font-normal">{error}</h2>
