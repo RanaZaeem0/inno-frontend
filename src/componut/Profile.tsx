@@ -59,7 +59,7 @@ useEffect(()=>{
   //    console.log(userBlog.map());
 
   return !loading ? <div>
-     <ProfileAvatar username={`${localStorage.getItem('username')}`} showEditbtn={showEditBtn}  />
+     <ProfileAvatar username={response[0].author.username} showEditbtn={showEditBtn}  />
     {  response.length > 0 &&
     response.map((item,index) =>{
       return <div key={index} className="w-full flex items-center justify-center">

@@ -96,13 +96,14 @@ export default function Updateblog() {
     },
     []
   );
-  const handleContentInput = useMemo(
-    () => (e:InputOrTextareaEvent) => {
-      e.target.style.height = "auto";
-      e.target.style.height = `${e.target.scrollHeight}px`;
-    },
-    []
-  );
+
+const handleContentInput = useMemo(
+  () => (e:InputOrTextareaEvent) => {
+    e.target.style.height = "auto";
+    e.target.style.height = `${e.target.scrollHeight}px`;
+  },
+  []
+);
 
   console.log(post);
 
