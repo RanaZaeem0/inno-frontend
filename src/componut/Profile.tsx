@@ -53,7 +53,7 @@ const Profile: React.FC = () => {
               >
                 <NavLink
                   to={`/readblog?id=${item.id}&name=${item.author.username}`}
-                  className="w-1/2"
+                  className="w-1/2 max-lg:w-11/12 max-lg:m-2"
                 >
                   <div className="flex items-center justify-center mt-10">
                     <div className="flex w-full border rounded-lg flex-col justify-center items-start px-6">

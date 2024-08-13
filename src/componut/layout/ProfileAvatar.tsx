@@ -13,8 +13,8 @@ export default function ProfileAvatar({
   return (
     <div>
       <div className=" relative flex items-center justify-center flex-col ">
-        <div className="w-2/3 h-56 border-b bg-white "></div>
-        <div className="absolute bottom-0   flex items-center m-2 w-1/2  justify-start ">
+        <div className="w-2/3 max-lg:w-full h-56 border-b bg-white "></div>
+        <div className="absolute bottom-0   flex items-center m-2 w-1/2 max-lg:w-11/12  justify-start ">
           <div className=" inline-flex items-center justify-center w-24 h-24 overflow-hidden bg-gray-700 text-white text-4xl rounded-full dark:bg-gray-600 ">
             <span className="font-medium text-white dark:text-gray-300">
               {username.charAt(0).toUpperCase()}
