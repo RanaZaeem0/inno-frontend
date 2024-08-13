@@ -49,7 +49,7 @@ export default function ReadBlog() {
   if (loading) {
     return (
       <div className="h-[80vh] items-center justify-center">
-        <div role="status" className="max-w-screen-1xl animate-pulse p-5">
+        <div role="status" className="-w-full items-center animate-pulse p-5">
           <div className="h-5 bg-gray-200 rounded-full dark:bg-gray-700 w-5/6 mb-4"></div>
           <div className="flex items-center mt-4">
             <svg

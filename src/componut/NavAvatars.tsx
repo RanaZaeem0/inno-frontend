@@ -11,12 +11,14 @@ import { useDispatch } from "react-redux";
 import { logout } from "../store/authSlice";
 import { useNavigate } from "react-router";
 import { ListItemText } from "@mui/material";
+import { useSearchParams } from "react-router-dom";
+import useGetuserProfile from "../hook/useGetuserProfile";
 
 const NavAvatars = () => {
   const [avatarEl, setAvatarEl] = useState<HTMLElement | null>(null);
   const [invisible, setInvisible] = useState(false);
   const [notifyEl, setNotifyEl] = useState<HTMLElement | null>(null);
-
+  const {userProfile,isProfileLoading} = useGetuserProfile()
   const handleAvatarClick = (e: MouseEvent<HTMLElement>) => {
     setAvatarEl(e.currentTarget);
   };
@@ -50,7 +52,10 @@ const NavAvatars = () => {
   const notifyId = notifyOpen ? "simple-notify" : undefined;
   const username: string | null = localStorage.getItem('username');
   const userId: string | null = localStorage.getItem('userId');
+  console.log(userId);
+  
 
+  
   return (
     <div>
       <Stack className="max-md:!w-12" direction="row" spacing={1}>
@@ -86,7 +91,7 @@ const NavAvatars = () => {
           <Divider />
           <ListItem disablePadding>
             <ListItemButton>
-              <button onClick={() => navigate(`/profile?userId=${userId}`)}>Your Profile</button>
+                <button onClick={() => navigate(`/profile?userId=${userId}`)}>Your Profile</button>
             </ListItemButton>
           </ListItem>
           <Divider />
