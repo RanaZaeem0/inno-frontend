@@ -91,7 +91,12 @@ const NavAvatars = () => {
           <Divider />
           <ListItem disablePadding>
             <ListItemButton>
-                <button onClick={() => navigate(`/profile?userId=${userId}`)}>Your Profile</button>
+                <button onClick={() => {
+                  navigate(`/profile?userId=${userId}`)
+                  location.reload()
+                }
+                  
+                  }>Your Profile</button>
             </ListItemButton>
           </ListItem>
           <Divider />
