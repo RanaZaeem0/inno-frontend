@@ -47,16 +47,7 @@ interface BlogPost {
   }
  
 
-  const formatDate = (dateString) => {
-    // Create a new Date object from the date string
-    const date = new Date(dateString);
-  
-    // Define options for formatting
-    const options = { day: '2-digit', month: 'short', year: 'numeric' };
-  
-    // Format the date using toLocaleDateString
-    return date.toLocaleDateString('en-GB', options);
-  };
+
 
 const response :BlogPost[] = posts
 
