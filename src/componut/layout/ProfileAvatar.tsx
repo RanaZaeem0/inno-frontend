@@ -4,11 +4,9 @@ import { faUserPen } from "@fortawesome/free-solid-svg-icons";
 export default function ProfileAvatar({
   userId ='2',
   username = "Jhon",
-  showEditbtn = false,
 }: {
   username: string | undefined;
-  showEditbtn: boolean;
-  userId:string
+  userId:string |undefined
 }) {
   const Navigate = useNavigate();
   const localUserId = localStorage.getItem('userId')
