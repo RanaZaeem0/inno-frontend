@@ -2,14 +2,16 @@ import { useNavigate } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPen } from "@fortawesome/free-solid-svg-icons";
 export default function ProfileAvatar({
+  userId ='2',
   username = "Jhon",
   showEditbtn = false,
 }: {
   username: string | undefined;
   showEditbtn: boolean;
+  userId:string
 }) {
   const Navigate = useNavigate();
-
+  const localUserId = localStorage.getItem('userId')
   return (
     <div>
       <div className=" relative flex items-center justify-center flex-col ">
@@ -28,22 +30,20 @@ export default function ProfileAvatar({
             <h2 className="font-semibold text-black text-4xl text-center pl-2">
               {username}
             </h2>
-            {showEditbtn ? (
+            {(userId== localUserId )? (
               <button
                 className="flex items-center gap-2  justify-end w-full"
                 onClick={() => Navigate("/userupdate")}
               >
                 Edit <FontAwesomeIcon className="h-5" icon={faUserPen} />{" "}
               </button>
-            ) : null}
-            {!showEditbtn ? (
-              <button
-                type="button"
-                className="text-white cursor-pointer bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-              >
-                Follow
-              </button>
-            ) : null}
+            ) : <button
+            type="button"
+            className="text-white cursor-pointer bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          >
+            Follow
+          </button>}
+          
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ const useGetUserBlog = () => {
     };
 
     fetchBlog();
-  }, []);
+  }, [userId]);
 
   return {
     userBlog,

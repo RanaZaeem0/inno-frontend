@@ -34,7 +34,7 @@ const useGetuserProfile = () => {
     };
 
     fetchProfile();
-  }, []);
+  }, [userId]);
 
   return {
     userProfile,

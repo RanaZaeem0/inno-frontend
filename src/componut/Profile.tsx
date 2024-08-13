@@ -27,6 +27,7 @@ const Profile: React.FC = () => {
       {!isProfileLoading ? (
         <ProfileAvatar
           username={userProfile?.username}
+          userId={userProfile.id}
           showEditbtn={showEditBtn}
         />
       ) : (

@@ -93,7 +93,6 @@ const NavAvatars = () => {
             <ListItemButton>
                 <button onClick={() => {
                   navigate(`/profile?userId=${userId}`)
-                  location.reload()
                 }
                   
                   }>Your Profile</button>
